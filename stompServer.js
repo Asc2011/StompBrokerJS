@@ -26,9 +26,9 @@ var buildConfig     = require('./lib/config');
 /**
  * @class
  * @augments EventEmitter
- * 
+ *
  * Create Stomp server with config
- * 
+ *
  * @param {ServerConfig} config Configuration for STOMP server
  */
 var StompServer = function (config) {
@@ -37,12 +37,12 @@ var StompServer = function (config) {
   if (config === undefined) {
     config = {};
   }
-  
-  this.conf = buildConfig(config);  
+
+  this.conf = buildConfig(config);
 
   this.subscribes = [];
   this.middleware = {};
-  this.frameHandler = new Stomp.FrameHandler(this);
+  this.frameHandler = new stomp.FrameHandler(this);
 
   this.socket = new protocolAdapter[this.conf.protocol]({
       server: this.conf.server,

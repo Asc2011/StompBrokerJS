@@ -24,7 +24,6 @@
   "homepage": "https://github.com/4ib3r/StompBrokerJS#readme",
   "dependencies": {
     "sockjs": "^0.3.19",
-    "stompjs": "^2.3.3",
     "ws": "^5.1.1"
   },
   "devDependencies": {
